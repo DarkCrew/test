@@ -170,6 +170,74 @@
 	border: 0;
 }
 
+/* Adaptive */
+
+@media (max-width: 768px) {
+	.main {
+		min-height: 100vh;
+		height: 100%;
+	}
+	.sign-up {
+		height: auto;
+		margin: 30px 0;
+		width: 90%;
+	}
+
+	.sign-up__cover {
+		width: 10%;
+		justify-content: center;
+	}
+
+	.sign-up__cover p {
+		font-size: 25px;
+	}
+
+	.sign-up__input {
+		width: 90%;
+	}
+
+	.sign-up__input--info {
+		flex-direction: column;
+	}
+
+	.sign-up__input--info {
+		height: auto;
+	}
+
+	.sign-up__input--complete {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sign-up__input--info__item--date {
+		gap: 10px;
+	}
+
+	.sign-up__input--info__item--date select:nth-child(1) {
+		width: 20%;
+	}
+	.sign-up__input--info__item--date select:nth-child(2) {
+		width: 50%;
+	}
+	.sign-up__input--info__item--date select:nth-child(3) {
+		width: 30%;
+	}
+}
+
+@media (max-width: 425px) {
+	.sign-up__input--subtitle {
+		font-size: 12px;
+	}
+
+	.sign-up__input--info__item select {
+		font-size: 12px;
+	}
+
+	.sign-up__cover p {
+		font-size: 15px;
+	}
+}
+
 /* Import fonts */
 
 @font-face {

@@ -3,6 +3,7 @@ const csso = require("gulp-csso");
 const include = require("gulp-file-include");
 const autoprefixer = require("gulp-autoprefixer");
 const del = require("del");
+const concat = require("gulp-concat");
 const htmlmin = require("gulp-htmlmin");
 
 const sync = require("browser-sync").create();
@@ -30,7 +31,16 @@ function css() {
 			})
 		)
 		.pipe(csso())
+		.pipe(concat("index.css"))
 		.pipe(dest("dist"));
+}
+
+function fonts() {
+	return src("src/assets/fonts/**ttf").pipe(dest("dist/fonts"));
+}
+
+function img() {
+	return src("src/assets/img/**svg").pipe(dest("dist/img"));
 }
 
 function clear() {
@@ -47,6 +57,6 @@ function serve() {
 	watch("src/css/**.css", series(css)).on("change", sync.reload);
 }
 
-exports.build = series(clear, css, html);
-exports.serve = series(clear, css, html, serve);
+exports.build = series(clear, css, html, fonts, img);
+exports.serve = series(clear, css, html, fonts, img, serve);
 exports.clear = clear;

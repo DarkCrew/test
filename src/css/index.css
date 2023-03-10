@@ -1,3 +1,193 @@
-.signup {
-	font-size: 30px;
+:root {
+	--color-blue: #5a61ed;
+	--color-white: #ffffff;
+	--color-gray: #f2f2f2;
+	--color-light-gray: #dcdddf;
+}
+
+.main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--color-light-gray);
+}
+
+.sign-up {
+	display: flex;
+	height: 481px;
+	width: 665px;
+	border: 0.7px var(--color-gray) solid;
+}
+
+.sign-up__cover {
+	display: flex;
+	justify-content: flex-end;
+	width: 20.75%;
+	background: var(--color-blue);
+}
+
+.sign-up__cover p {
+	display: flex;
+	writing-mode: vertical-rl;
+	transform: rotate(-180deg);
+	color: var(--color-white);
+	font-family: "PTSans-Regular";
+	font-size: 49px;
+	letter-spacing: 0.5px;
+	padding-top: 22.5px;
+}
+
+.sign-up__input {
+	display: flex;
+	width: 79.25%;
+	flex-direction: column;
+	padding: 39px 22px 33px 21px;
+	background: var(--color-white);
+}
+
+.sign-up__input--title {
+	font-family: "WorkSans-Medium";
+	font-size: 22px;
+	letter-spacing: -0.5px;
+	line-height: 26px;
+}
+
+.sign-up__input--subtitle {
+	font-family: "WorkSans-Light";
+	font-size: 14px;
+	margin-bottom: 20px;
+	line-height: 14px;
+}
+
+.sign-up__input--info {
+	display: flex;
+	height: 42px;
+	gap: 13px;
+	margin-bottom: 16px;
+}
+
+.sign-up__input--info__item {
+	display: flex;
+	height: 42px;
+	width: 100%;
+	flex-direction: column;
+}
+
+.sign-up__input--info__item--date {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sign-up__input--info__item--date select:nth-child(1) {
+	width: 56px;
+}
+.sign-up__input--info__item--date select:nth-child(2) {
+	width: 91px;
+}
+.sign-up__input--info__item--date select:nth-child(3) {
+	width: 68px;
+}
+
+.sign-up__input--info__item--gender {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.sign-up__input--info__item p {
+	font-family: "WorkSans-Light";
+	font-size: 12px;
+}
+
+.sign-up__input--info__item--gender p {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	font-family: "WorkSans-Regular";
+	font-size: 14px;
+	padding-right: 19px;
+	padding-left: 6px;
+}
+
+.sign-up__input--info__item input {
+	outline: 0;
+	border: 0;
+	padding: 0;
+	font-family: "WorkSans-Regular";
+	font-size: 14px;
+	padding-left: 3px;
+	border-bottom: 0.7px var(--color-gray) solid;
+}
+
+.sign-up__input--info__item select {
+	height: 21.8px;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	appearance: none;
+	-webkit-appearance: none;
+	font-family: "WorkSans-Regular";
+	font-size: 14px;
+	border-bottom: 0.7px var(--color-gray) solid;
+	background: url("./img/down-arrow.svg") no-repeat right center;
+}
+
+.sign-up__input--complete {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.sign-up__input--complete__item {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.sign-up__input--complete__item p {
+	font-family: "WorkSans-Light";
+	font-size: 13px;
+}
+
+.sign-up__input--complete__item p span {
+	font-family: "WorkSans-Medium";
+	text-decoration: underline;
+	font-size: 13px;
+	color: var(--color-blue);
+}
+
+.sign-up__input--complete input {
+	display: flex;
+	height: 32px;
+	width: 154px;
+	justify-content: center;
+	align-items: center;
+	font-family: "PTSans-Regular";
+	font-size: 14px;
+	color: var(--color-white);
+	background: var(--color-blue);
+	border: 0;
+}
+
+/* Import fonts */
+
+@font-face {
+	font-family: "PTSans-Regular";
+	src: url(./fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "WorkSans-Regular";
+	src: url(./fonts/WorkSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "WorkSans-Medium";
+	src: url(./fonts/WorkSans-Medium.ttf);
+}
+
+@font-face {
+	font-family: "WorkSans-Light";
+	src: url(./fonts/WorkSans-Light.ttf);
 }

@@ -132,7 +132,9 @@
 	border-bottom: 2px var(--color-red) solid;
 }
 
-.input-email.success {
+.input-email.success,
+.input-password.success,
+.input-confirm-password.success {
 	background-repeat: no-repeat;
 	background-position: center right;
 	box-sizing: border-box;

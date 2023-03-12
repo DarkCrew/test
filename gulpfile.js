@@ -43,6 +43,10 @@ function img() {
 	return src("src/assets/img/**svg").pipe(dest("dist/img"));
 }
 
+function js() {
+	return src("src/js/**js").pipe(dest("dist"));
+}
+
 function clear() {
 	return del("dist");
 }
@@ -57,6 +61,6 @@ function serve() {
 	watch("src/css/**.css", series(css)).on("change", sync.reload);
 }
 
-exports.build = series(clear, css, html, fonts, img);
-exports.serve = series(clear, css, html, fonts, img, serve);
+exports.build = series(clear, css, html, js, fonts, img);
+exports.serve = series(clear, css, html, js, fonts, img, serve);
 exports.clear = clear;

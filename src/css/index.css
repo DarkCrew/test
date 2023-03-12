@@ -3,6 +3,7 @@
 	--color-white: #ffffff;
 	--color-gray: #f2f2f2;
 	--color-light-gray: #dcdddf;
+	--color-red: #ff2828;
 }
 
 .main {
@@ -118,6 +119,24 @@
 	font-size: 14px;
 	padding-left: 3px;
 	border-bottom: 0.7px var(--color-gray) solid;
+}
+
+.input-form::placeholder {
+	font-family: "WorkSans-Regular";
+	font-size: 14px;
+	color: var(--color-red);
+}
+
+.input-form.error {
+	color: var(--color-red);
+	border-bottom: 2px var(--color-red) solid;
+}
+
+.input-email.success {
+	background-repeat: no-repeat;
+	background-position: center right;
+	box-sizing: border-box;
+	background-image: url("./img/checkmark.svg");
 }
 
 .sign-up__input--info__item select {
